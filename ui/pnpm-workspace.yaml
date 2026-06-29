@@ -1,0 +1,12 @@
+# pnpm settings for the UI project.
+#
+# allowBuilds lists dependencies that are permitted to run install/build
+# scripts. pnpm blocks these by default as a supply-chain safeguard; the
+# entries below are trusted native bindings required by our toolchain.
+allowBuilds:
+  unrs-resolver: true
+
+# pnpm withholds packages newer than its default minimum release age as a
+# supply-chain safeguard. List any we explicitly want to allow through early.
+minimumReleaseAgeExclude:
+  - prettier@3.8.5
